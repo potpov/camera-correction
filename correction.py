@@ -104,13 +104,15 @@ def sfrs_calibrate(img):
         loop over epoch applying distortion with different coefficients,
         scoring the results and selecting the best or the input image if none
         of the used coefficients fit this input
-        :param img: numpy array
-        :return: numpy array
+        Args
+            img: numpy array
+        Return
+            output: numpy array
         """
         rsz = cv2.resize(img, (0, 0), fx=.6, fy=.6)
-        k = conf.CAL_START_COEFF
+        k = conf.CAL_START_COEFF # modify k factor according to image size
         res = {}
-        add_k = conf.CAL_COEFF_INC_FACTOR
+        add_k = conf.CAL_COEFF_INC_FACTOR # modify add_k factor according to image size
 
         for i in range(conf.CAL_EPOCH_NUMB):
             # apply distortion with the current coeff k
