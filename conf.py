@@ -1,0 +1,9 @@
+#########
+# FOR YOUR OWN CALIBRATION
+
+CAL_START_COEFF = 0.00000001
+CAL_COEFF_INC_FACTOR = 0.0000007
+CAL_EPOCH_NUMB = 12
+
+IMAGE_PATH = './images/test.jpg'
+OUTPUT_PATH = './results/result.jpg'
